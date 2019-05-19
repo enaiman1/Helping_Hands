@@ -14,6 +14,9 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+// connect mongoose
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:user123@ds147446.mlab.com:47446/heroku_dwmsrb6z")
+
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
