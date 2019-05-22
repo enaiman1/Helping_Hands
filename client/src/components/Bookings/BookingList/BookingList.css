@@ -1,4 +1,10 @@
 
+.bookingTitle {
+  text-align: center;
+  font-size: 6.5rem;
+  font-weight: 700;
+}
+
 .bookings__list {
     list-style: none;
     margin: 0 auto;
@@ -10,7 +16,8 @@
   .bookings__item {
     margin: 0.5rem 0;
     padding: 0.5rem;
-    border: 1px solid #5101d1;
+    border: 3px solid #50b0ff8f;
+    background: #50bfff9a;
     display: flex;
     justify-content: space-between;
     align-items: center;
