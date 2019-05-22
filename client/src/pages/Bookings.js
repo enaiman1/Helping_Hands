@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Spinner from '../components/Spinner/Spinner';
 import AuthContext from '../context/auth-context';
 import BookingList from '../components/Bookings/BookingList/BookingList';
+import './Bookings.css';
 
 class BookingsPage extends Component {
   state = {
