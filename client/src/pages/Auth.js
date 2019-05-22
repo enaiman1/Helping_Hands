@@ -8,16 +8,16 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
-import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ListGroup from 'react-bootstrap/ListGroup';
 import logo from '../media/logo.png';
 import hands1 from '../media/hands1.jpeg';
 import hands2 from '../media/hands2.jpeg';
 import hands3 from '../media/hands3.jpg';
-import carousel1 from '../media/carousel1.jpeg';
-import carousel2 from '../media/carousel2.jpg';
-import carousel3 from '../media/carousel3.jpg';
+// import carousel1 from '../media/carousel1.jpeg';
+// import carousel2 from '../media/carousel2.jpg';
+// import carousel3 from '../media/carousel3.jpg';
 import AuthContext from '../context/auth-context';
+import Row from 'react-bootstrap/Row';
 
 class AuthPage extends Component {
   state = {
@@ -129,46 +129,48 @@ class AuthPage extends Component {
                 Switch to {this.state.isLogin ? 'Signup' : 'Login'}
               </Button>
             </div>
-            <Form.Text className="text-muted formtext">
+            <Form.Text className="text-muted">
               "Giving is not about making a donation, it is about making a difference."
     </Form.Text>
           </Form>
         </Jumbotron>
 
-        <CardGroup id="card1">
-          <Card>
-            <Card.Img variant="top" id="img1" src={hands1} />
-            <Card.Body>
-              <Card.Title>Volunteer</Card.Title>
-              <Card.Text>
-                Spend your time making an impact on the lives of those around you
+        <Row>
+          <CardGroup>
+            <Card className="card">
+              <Card.Img variant="top" id="img1" src={hands1} />
+              <Card.Body>
+                <Card.Title>Volunteer</Card.Title>
+                <Card.Text>
+                  Spend your time making an impact on the lives of those around you
       </Card.Text>
-              <Button variant="primary" id="button">Save Your Spot</Button>
-            </Card.Body>
+                <Button variant="primary" id="button">Save Your Spot</Button>
+              </Card.Body>
 
-          </Card>
-          <Card>
-            <Card.Img variant="top" id="img2" src={hands2} />
-            <Card.Body>
-              <Card.Title>Organize</Card.Title>
-              <Card.Text>
-                Put your best foot forward and step into a leadership role{' '}
-              </Card.Text>
-              <Button variant="primary" id="button">Learn More</Button>
-            </Card.Body>
+            </Card>
+            <Card className="card">
+              <Card.Img variant="top" id="img2" src={hands2} />
+              <Card.Body>
+                <Card.Title>Organize</Card.Title>
+                <Card.Text>
+                  Put your best foot forward and step into a leadership role{' '}
+                </Card.Text>
+                <Button variant="primary" id="button">Learn More</Button>
+              </Card.Body>
 
-          </Card>
-          <Card>
-            <Card.Img variant="top" id="img3" src={hands3} />
-            <Card.Body>
-              <Card.Title>Donate</Card.Title>
-              <Card.Text>
-                Whether it is time, money or positivity we appreciate your awareness
+            </Card>
+            <Card className="card">
+              <Card.Img variant="top" id="img3" src={hands3} />
+              <Card.Body>
+                <Card.Title>Donate</Card.Title>
+                <Card.Text>
+                  Whether it is time, money or positivity we appreciate your awareness
       </Card.Text>
-              <Button variant="primary" id="button">Start Here</Button>
-            </Card.Body>
-          </Card>
-        </CardGroup>
+                <Button variant="primary" id="button">Start Here</Button>
+              </Card.Body>
+            </Card>
+          </CardGroup>
+        </Row>
 
         <Container>
           <Carousel>
