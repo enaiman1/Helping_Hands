@@ -1,7 +1,21 @@
+body {
+  background-image: url(../media/eventBackground2.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+
+}
+
+.eventTitle {
+  text-align: center;
+  font-size: 6.5rem;
+  font-weight: 700;
+}
 
 .events-control {
     text-align: center;
-    border: 1px solid #5101d1;
+    border: 3px solid #50b0ff8f;
+    background: #50bfff9a;
     padding: 1rem;
     margin: 2rem auto;
     width: 30rem;

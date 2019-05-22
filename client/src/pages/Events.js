@@ -219,6 +219,9 @@ class EventsPage extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="eventTitle">
+          <h1>Event Booking</h1>
+        </div>
         {(this.state.creating || this.state.selectedEvent) && <Backdrop />}
         {this.state.creating && (
           <Modal
