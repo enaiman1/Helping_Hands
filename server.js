@@ -60,26 +60,26 @@ app.get("*", function(req, res) {
 
 
 /*connects to mongo atlas*/
-mongoose
-  .connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${
-      process.env.MONGO_PASSWORD
-    }@cluster0-hh00e.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
-    { useNewUrlParser: true }
-    )
-.then(() => {
-    app.listen(8000);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+// mongoose
+//   .connect(
+//     `mongodb+srv://${process.env.MONGO_USER}:${
+//       process.env.MONGO_PASSWORD
+//     }@cluster0-hh00e.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
+//     { useNewUrlParser: true }
+//     )
+// .then(() => {
+//     app.listen(8000);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
 
 /* connect to heroku or local*/ 
-// const mongoURL = process.env.MONGODB_URI|| "mongodb://localhost:27017/eventsTestDb"
-// mongoose.connect(mongoURL, {useNewUrlParser: true})
-// app.listen(PORT, function() {
-//   console.log(`🌎 ==> API server now on port ${PORT}!`);
-// });
+const mongoURL = process.env.MONGODB_URI|| "mongodb://localhost:27017/eventsTestDb"
+mongoose.connect(mongoURL, {useNewUrlParser: true})
+app.listen(PORT, function() {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
+});
 
 
 
