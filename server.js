@@ -53,7 +53,7 @@ app.get("*", function(req, res) {
 // connect mongoose
 
 /* original set up*/
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:user123@ds147446.mlab.com:47446/heroku_dwmsrb6z")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://test@test.com:test123@ds147446.mlab.com:47446/heroku_dwmsrb6z")
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
