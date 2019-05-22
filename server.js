@@ -53,20 +53,26 @@ app.get("*", function(req, res) {
 // connect mongoose
 
 /* original set up*/
-mongoose.connect(process.env.MONGODB_URI || "mongodb://test@test.com:test123@ds147446.mlab.com:47446/heroku_dwmsrb6z")
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://test@test.com:test123@ds147446.mlab.com:47446/heroku_dwmsrb6z")
+// app.listen(PORT, function() {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
 
 
 /*connects to mongo atlas*/
-// mongoose
-//   .connect(
-//     `mongodb+srv://${process.env.MONGO_USER}:${
-//       process.env.MONGO_PASSWORD
-//     }@cluster0-hh00e.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
-//     { useNewUrlParser: true }
-//     )
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.MONGO_USER}:${
+      process.env.MONGO_PASSWORD
+    }@cluster0-hh00e.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
+    { useNewUrlParser: true }
+    )
+.then(() => {
+    app.listen(8000);
+  })
+  .catch(err => {
+    console.log(err);
+  });
 
 /* connect to heroku or local*/ 
 // const mongoURL = process.env.MONGODB_URI|| "mongodb://localhost:27017/eventsTestDb"
@@ -76,12 +82,6 @@ app.listen(PORT, function() {
 // });
 
 
-// .then(() => {
-//     app.listen(8000);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
 
 
 
