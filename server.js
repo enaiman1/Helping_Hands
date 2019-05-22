@@ -52,12 +52,12 @@ app.get("*", function(req, res) {
 
 // connect mongoose
 
-/* original set up
+/* original set up*/
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user:user123@ds147446.mlab.com:47446/heroku_dwmsrb6z")
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-*/
+
 
 /*connects to mongo atlas*/
 // mongoose
@@ -69,11 +69,11 @@ app.listen(PORT, function() {
 //     )
 
 /* connect to heroku or local*/ 
-const mongoURL = process.env.MONGODB_URI|| "mongodb://localhost:27017/eventsTestDb"
-mongoose.connect(mongoURL, {useNewUrlParser: true})
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+// const mongoURL = process.env.MONGODB_URI|| "mongodb://localhost:27017/eventsTestDb"
+// mongoose.connect(mongoURL, {useNewUrlParser: true})
+// app.listen(PORT, function() {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
 
 
 // .then(() => {

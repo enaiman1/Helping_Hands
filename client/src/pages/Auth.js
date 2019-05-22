@@ -235,9 +235,9 @@ class AuthPage extends Component {
                             <br></br>
                             <input type="email" id="email" ref={this.emailEl} />
                           </Form.Group>
-                          <Button variant="primary" type="submit" id="button">
+                          {/* <Button variant="primary" type="submit" id="button">
                             Stay Connected
-  </Button>
+  </Button> */}
                         </ListGroupItem>
                       </ListGroup>
                     </div>
