@@ -7,8 +7,9 @@ const bookingList = props => (
     {props.bookings.map(booking => {
       return (
         <React.Fragment>
-        <div className="bookingTitle">
-          <h1>Booked Events</h1>
+        <div >
+          <h1 className="bookingTitle">Booked Events</h1>
+          <p className="bookingContent"> Here is your list of events you have registared for</p>
         </div>
         <li key={booking._id} className="bookings__item">
           <div className="bookings__item-data">

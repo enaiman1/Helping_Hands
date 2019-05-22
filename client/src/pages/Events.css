@@ -5,6 +5,13 @@ background-size: cover;
 
 
 }
+
+.eventTitle {
+  text-align: center;
+  font-size: 6.5rem;
+  font-weight: 700;
+}
+
 .events-control {
     text-align: center;
     border: 3px solid #50b0ff8f;
