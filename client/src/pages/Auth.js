@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import './Auth.css';
-import AuthContext from '../context/auth-context';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import CardGroup from 'react-bootstrap/CardGroup';
@@ -18,6 +17,7 @@ import hands3 from '../media/hands3.jpg';
 import carousel1 from '../media/carousel1.jpeg';
 import carousel2 from '../media/carousel2.jpg';
 import carousel3 from '../media/carousel3.jpg';
+import AuthContext from '../context/auth-context';
 
 class AuthPage extends Component {
   state = {
@@ -109,37 +109,30 @@ class AuthPage extends Component {
 
   render() {
     return (
-      <div className="maindiv">
+      <div id="maindiv">
         <Jumbotron fluid id="jumbo">
           <div id="flex-container">
-            <div id="img">
-              <img alt="" src={logo} height="500px" width="500px"></img>
-            </div>
-
-            <div>
-
-              <Form className="auth-form" onSubmit={this.submitHandler}>
-                <div className="form-control">
-                  <Form.Label htmlFor="email">E-Mail</Form.Label>
-                  <input type="email" id="email" ref={this.emailEl} />
-                </div>
-                <div className="form-control">
-                  <Form.Label htmlFor="password">Password</Form.Label>
-                  <input type="password" id="password" ref={this.passwordEl} />
-                </div>
-                <div className="form-actions">
-                  <Button type="submit">Submit</Button>
-                  <Button type="button" onClick={this.switchModeHandler}>
-                    Switch to {this.state.isLogin ? 'Signup' : 'Login'}
-                  </Button>
-                </div>
-              </Form>
-
-            </div>
-            <div>
-              <h8>"Giving is not about <br></br>making a donation, <br></br>it is about making <br></br>a difference."</h8>
-            </div>
+            <img id="logo" alt="Helping Hands" src={logo}></img>
           </div>
+          <Form className="auth-form" onSubmit={this.submitHandler}>
+            <div className="form-control">
+              <Form.Label htmlFor="email">E-Mail</Form.Label>
+              <input type="email" id="email" ref={this.emailEl} />
+            </div>
+            <div className="form-control">
+              <Form.Label htmlFor="password">Password</Form.Label>
+              <input type="password" id="password" ref={this.passwordEl} />
+            </div>
+            <div className="form-actions">
+              <Button type="submit">Submit</Button>
+              <Button type="button" onClick={this.switchModeHandler}>
+                Switch to {this.state.isLogin ? 'Signup' : 'Login'}
+              </Button>
+            </div>
+            <Form.Text className="text-muted formtext">
+              "Giving is not about making a donation, it is about making a difference."
+    </Form.Text>
+          </Form>
         </Jumbotron>
 
         <CardGroup id="card1">
@@ -149,11 +142,11 @@ class AuthPage extends Component {
               <Card.Title>Volunteer</Card.Title>
               <Card.Text>
                 Spend your time making an impact on the lives of those around you
-</Card.Text>
+      </Card.Text>
               <Button variant="primary" id="button">Save Your Spot</Button>
             </Card.Body>
-          </Card>
 
+          </Card>
           <Card>
             <Card.Img variant="top" id="img2" src={hands2} />
             <Card.Body>
@@ -163,15 +156,15 @@ class AuthPage extends Component {
               </Card.Text>
               <Button variant="primary" id="button">Learn More</Button>
             </Card.Body>
-          </Card>
 
+          </Card>
           <Card>
             <Card.Img variant="top" id="img3" src={hands3} />
             <Card.Body>
               <Card.Title>Donate</Card.Title>
               <Card.Text>
                 Whether it is time, money or positivity we appreciate your awareness
-</Card.Text>
+      </Card.Text>
               <Button variant="primary" id="button">Start Here</Button>
             </Card.Body>
           </Card>
@@ -179,36 +172,39 @@ class AuthPage extends Component {
 
         <Container>
           <Carousel>
-            <Carousel.Item data-interval="500">
+            <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={carousel1}
+                src="https://images.pexels.com/photos/678637/pexels-photo-678637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                 alt="First slide"
-                id="img-1" />
-
+                id="img-1"
+              />
               <Carousel.Caption>
                 <h3>Impact Lives</h3>
                 {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item data-interval="500">
+            <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={carousel2}
+                src="https://cdn.pixabay.com/photo/2017/07/29/00/09/child-2550326_1280.jpg"
                 alt="Third slide"
-                id="img-2" />
+                id="img-2"
+              />
 
               <Carousel.Caption>
                 <h4>Change Futures</h4>
                 {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item data-interval="500">
+            <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={carousel3}
+                src="https://cdn.pixabay.com/photo/2017/02/03/17/41/poverty-2035694_1280.jpg"
                 alt="Third slide"
-                id="img-3" />
+                id="img-3"
+              />
+
               <Carousel.Caption>
                 <h2>Lend A Helping Hand</h2>
                 {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
@@ -219,77 +215,42 @@ class AuthPage extends Component {
 
         <Container id="last">
           <CardGroup>
+
             <Card style={{ width: '18rem' }}>
-              <Card.Body>
-                <Card.Text>
-                  <div className="flex-container">
-                    <div id="info">
-                      <h1 id="info1">Stay Connected</h1>
-                      <ListGroup className="list-group-flush" id="info2">
-                        <ListGroupItem>-Sign-up to stay connected to our work and hear about how you can make a difference worldwide.-</ListGroupItem>
-                        <ListGroupItem>
-                          <Form.Group controlId="formBasicEmail" onSubmit={this.submitHandler}>
-                            <Form.Label>
-                            </Form.Label>
-                            <Form.Label>Email address: </Form.Label>
-                            <br></br>
-                            <input type="email" id="email" ref={this.emailEl} />
-                          </Form.Group>
-                          <Button variant="primary" type="submit" id="button">
-                            Stay Connected
-  </Button>
-                        </ListGroupItem>
-                      </ListGroup>
-                    </div>
-                    <div id="info">
-                      <h1 id="info1">Get Involved</h1>
-                      <br></br>
-                      <h6>Donate</h6>
-                      <h6>Upcoming Events</h6>
-                      <h6>Corporate Partnership</h6>
-                      <h6>Volunteer Opportunities</h6>
-                      <h6>Join Our Support Team</h6>
-                      <h6>Internship Opportunities</h6>
-                      <h6>Sign up for our Newsletter</h6>
-                    </div>
-                    <div id="info">
-                      <h1 id="info1" className="about">About</h1>
-                      <br></br>
-                      <h6>Blog</h6>
-                      <h6>Our Mission</h6>
-                      <h6>The Impact</h6>
-                      <h6>Financials/Annual Report</h6>
-                      <h6>Program Impact</h6>
-                      <h6>Videos</h6>
-                    </div>
-                    <div id="info">
-                      <h1 id="info1" className="contact">Contact</h1>
-                      <br></br>
-                      <h6>Contact Us</h6>
-                      <h6>Become a Partner</h6>
-                      <h6>Locations</h6>
-                      <h6>111-111-1111</h6>
-                    </div>
-                  </div>
-                </Card.Text>
-              </Card.Body>
+              <ListGroup variant="flush" className="info1">
+                <h1>Get Involved</h1>
+                <ListGroup.Item className="info">Donate</ListGroup.Item>
+                <ListGroup.Item className="info">Upcoming Events</ListGroup.Item>
+                <ListGroup.Item className="info">Corporate Partnership</ListGroup.Item>
+                <ListGroup.Item className="info">Volunteer Opportunities</ListGroup.Item>
+                <ListGroup.Item className="info">Join Our Support Team</ListGroup.Item>
+                <ListGroup.Item className="info">Internship Opportunities</ListGroup.Item>
+                <ListGroup.Item className="info">Sign up for our Newsletter</ListGroup.Item>
+              </ListGroup>
+            </Card>
+
+            <Card style={{ width: '18rem' }}>
+              <ListGroup variant="flush" className="info1">
+                <h1 className="about">About</h1>
+                <ListGroup.Item className="info">Blog</ListGroup.Item>
+                <ListGroup.Item className="info">Our Mission</ListGroup.Item>
+                <ListGroup.Item className="info">The Impact</ListGroup.Item>
+                <ListGroup.Item className="info">Financials/Annual Reports</ListGroup.Item>
+                <ListGroup.Item className="info">Videos</ListGroup.Item>
+              </ListGroup>
+            </Card>
+
+            <Card style={{ width: '18rem' }}>
+              <ListGroup variant="flush" className="info">
+                <h1 className="contact">Contact</h1>
+                <ListGroup.Item className="info">Contact Us</ListGroup.Item>
+                <ListGroup.Item className="info">Become a Partner</ListGroup.Item>
+                <ListGroup.Item className="info">Locations</ListGroup.Item>
+                <ListGroup.Item className="info">111-111-1111</ListGroup.Item>
+              </ListGroup>
             </Card>
           </CardGroup>
         </Container>
-
-        <Card>
-          <Card.Body id="footer">
-            <Card.Title>Helping Hands 2019
-    <br></br>
-              UCF Coding Bootcamp
-    </Card.Title>
-            <Card.Text>
-              Eric Naiman<br></br>
-              Dylan Armstrong<br></br>
-              Kyle Caplis<br></br>
-            </Card.Text>
-          </Card.Body>
-        </Card>
       </div>
     );
   }

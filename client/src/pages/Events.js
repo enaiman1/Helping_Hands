@@ -227,8 +227,8 @@ class EventsPage extends Component {
             canConfirm
             onCancel={this.modalCancelHandler}
             onConfirm={this.modalConfirmHandler}
-            confirmText="Confirm"
-          >
+            confirmText="Confirm" >
+
             <form>
               <div className="form-control">
                 <label htmlFor="title">Title</label>

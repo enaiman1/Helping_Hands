@@ -2,17 +2,24 @@
     width: 25rem;
     max-width: 80%;
     margin: 5rem auto;
-  }
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #47476b;
+    font-weight: bolder;
+    position: relative;
+    left: 75px;
+    top: 20px;
+}
 
-  #maindiv{
+#maindiv {
     background-color: steelblue;
 }
-#flex-container{
+
+#flex-container {
     display: flex;
 }
 
-#jumbo{
-
+#jumbo {
     background: url(https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -20,138 +27,95 @@
     background-size: cover;
     height: 900px;
     margin-bottom: 0% !important;
-    
-  
- 
 }
 
-#button{
+#button {
     background-color: coral;
     color: black;
     font-size: 13px;
 }
 
-#signin{
-text-align: center;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-color: #47476b;
-font-weight: bolder;
-position: relative;
-left: 75px;
-top: 20px;
-
-}
-
-#img{
+#logo {
     position: relative;
     bottom: 195px;
     right: 50px;
    
 }
-#img1{
+
+#img1 {
     height: 300px;
 
 }
-#img2{
+#img2 {
     height: 300px;
   
 }
-#img3{
+#img3 {
     height: 300px;
    
 }
 
-#img-1{
-    height:600px;
-    width: 100%;
-}
-#img-2{
-    height:600px;
-    width: 100%;
-}
-#img-3{
+#img-1 {
     height:600px;
     width: 100%;
 }
 
-.flex-container{
+#img-2 {
+    height:600px;
+    width: 100%;
+}
+
+#img-3 {
+    height:600px;
+    width: 100%;
+}
+
+.flex-container {
     display: flex;
-    
-
 } 
-#info{
+
+.info {
 width: 350px;
-
-
 }
 
-.about{
+.formtext {
+    color: beige;
+position: relative;
+left: 175px;
+font-size: 60px;
+font-family: Florence, cursive;
+font-style: oblique;
+top: 100px;
+}
+
+.about {
     margin-right: 100px;
 }
+
 .contact{
     margin-right: 80px;
 }
 
-h6{
+h6 {
 font-size: 12px;
 color: steelblue;
 margin-left: 40px;
 
 }
-#info2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
-  font-size: 15px;
-  text-align: left;
- 
-}
 
-h8{
-    color: beige;
-   position: relative;
-   left: 175px;
-   font-size: 60px;
-   font-family: Florence, cursive;
-   font-style: oblique;
-   top: 100px;
-}
-
-#info1{
+.info1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 text-align: center;
 font-weight: bold;
 font-size: 30px;
 text-shadow: 2px 2px steelblue;
-
 }
- 
-
-#card1{
-    
-
-
-
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align: center;
-font-weight: bolder;
-
-
-}
-
-#card{
-   
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align: center;
-font-weight: bolder;
-
-
-}
-
 
 .main-content {
     margin: 0rem 0rem !important;
 }
-h3{
+
+h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bolder;
@@ -160,7 +124,7 @@ h3{
     font-size: 100px;
 }
 
-h2{
+h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bolder;
@@ -170,9 +134,7 @@ h2{
 
 }
 
-
-
-h4{
+h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bolder;
@@ -181,7 +143,7 @@ h4{
     font-size: 85px;
 }
 
-#footer{
+#footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 text-align: center;
 font-weight: bolder;
